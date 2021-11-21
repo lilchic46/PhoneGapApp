@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+    
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+    
+        <title>PhoneGap CW2.2</title>
+    </head>
+    <body>
+        <div data-role="page" id="page-create">
+            <div data-role="header" data-position="fixed">
+                <h1>PhoneGap CW2</h1></div>
+
+            <div data-role="main" class="ui-content">
+                <h2>Create new property</h2>
+                
+                <!-- Registration form -->
+                <form id="frm-register">
+                    <span id="error" style="color: red;"></span>
+                    <label class="main-text">Property Name</label>
+                    
+                    <input type="text" placeholder="Insert property name" id="property-name" required>
+                    <label class="main-text">Property Address and City</label>
+                    
+                    <input type="text" placeholder="Insert property address" id="property-address">
+                    
+                    <select id="city"></select>               
+                    <select id="district"></select>
+                    <select id="ward"></select>
+                    
+                    <label class="main-text">Property Type</label>
+                    <select id="property-type" required>
+                        <option value='0'>Select property type</option>
+                        <option value='Flat'>Flat</option>
+                        <option value='House'>House</option>
+                        <option value='Bungalow'>Bungalow</option>
+                    </select>  
+                    
+                    <label class="main-text">Bedrooms</label>
+                    <select id="bedroom" required>
+                        <option>Select bedrooms</option>
+                        <option> Studio </option>
+                        <option> One </option>
+                        <option> Two </option>
+                        <option> Three </option>
+                        <option> Four </option>
+                        <option> More than four </option>
+                    </select>        
+                    
+                    <label class="main-text">Property Monthly Rent Price</label>
+                    <input type="number" placeholder="Insert monthly rent price" id="rent-price" required>
+                    
+                    <label class="main-text">Furniture Type</label>
+                    <select id="furniture-type">
+                        <option>Please choose your furniture type</option>
+                        <option> Furnished </option>
+                        <option> Unfurnished </option>
+                        <option> Part Furnished </option>
+                    </select> 
+                    
+                    <label class="main-text">Name of reporter</label>
+                    <input type="text" placeholder="Insert name of reporter" id="reporter" required> 
+                    
+                    <label class="main-text">Note</label> 
+                    <input type="text" placeholder="Insert note" id="note">                   
+
+                    <button type="submit" class="cre">Create Property</button>
+                </form>
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar"></div>
+            </div>
+        </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/address.js"></script>
+    <script src="js/index.js"></script>
+    </body>
+</html>
